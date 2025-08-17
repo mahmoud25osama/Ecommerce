@@ -1,5 +1,5 @@
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
-import { Button } from "@/components/ui/button"
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet"
+import { Button } from "../ui/button"
 import { Trash2, ShoppingCart, ShoppingBag, Plus, Minus, ArrowRight, Package } from "lucide-react"
 import { useContext } from "react"
 import { useDispatch, useSelector } from "react-redux"
