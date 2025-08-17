@@ -59,7 +59,7 @@ export const ProductCard = ({ product, onQuickView, onAddToCart }) => {
                                 <span className="text-2xl font-bold text-gray-900">${product.priceAfterDiscount}</span>
                             </>
                         )}
-                        <span className={`${product.price > product.priceAfterDiscount ? "text-gray-500 line-through" : "text-gray-500 line-through"}`}>${product.price}</span>
+                        <span className={`${product.price > product.priceAfterDiscount ? "text-gray-500 line-through" : "text-2xl font-bold text-gray-900"}`}>${product.price}</span>
                     </div>
                 </div>
 
