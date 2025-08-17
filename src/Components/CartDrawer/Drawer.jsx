@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom"
 import { CartContext } from "../../Context/CartContext/CartContext"
 
 export default function CartSheet() {
-    const { total, cartProduct, deleteProduct } = useContext(CartContext)
+    const {total, shipping, tax,numOfCartItems, subtotal, cartProduct, deleteProduct } = useContext(CartContext)
     const { isOpen } = useSelector((state) => state.cart)
     const dispatch = useDispatch()
     const navigate = useNavigate();
@@ -123,20 +123,24 @@ export default function CartSheet() {
                         {/* Summary */}
                         <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/50 shadow-lg">
                             <div className="flex items-center justify-between mb-4">
-                                <span className="text-lg font-semibold text-gray-700">Subtotal:</span>
+                                <span className="text-lg font-semibold text-gray-700">Subtotal ({numOfCartItems} items)</span>
                                 <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                                    ${total}
+                                    ${subtotal.toFixed(2)}
                                 </span>
                             </div>
 
                             <div className="space-y-1 text-sm text-gray-600 mb-4">
                                 <div className="flex justify-between">
-                                    <span>Items ({cartProduct?.length})</span>
-                                    <span>${total}</span>
+                                    <span className="text-gray-600">Tax</span>
+                                    <span className="font-semibold">
+                                        ${tax.toFixed(2)}
+                                    </span>
                                 </div>
                                 <div className="flex justify-between">
                                     <span>Shipping</span>
-                                    <span className="text-green-600 font-semibold">Free</span>
+                                    <span className="text-green-600 font-semibold">
+                                        {shipping === 0 ? 'Free' : `${shipping.toFixed(2)}`}
+                                    </span>
                                 </div>
                             </div>
 
@@ -144,7 +148,7 @@ export default function CartSheet() {
                                 <div className="flex justify-between items-center">
                                     <span className="text-xl font-bold text-gray-800">Total:</span>
                                     <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                                        ${total}
+                                        ${total.toFixed(2)}
                                     </span>
                                 </div>
                             </div>
