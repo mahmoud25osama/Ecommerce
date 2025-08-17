@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useFormik } from 'formik'
 import React, { useContext, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,Link} from 'react-router-dom';
 import * as yup from 'yup';
 import { ClipLoader } from 'react-spinners';
 import { AuthContext } from '@/Context/AuthContext/AuthContext';
@@ -99,7 +99,7 @@ export default function Login() {
             </button>
           </form>
           <p className="mt-4 text-sm text-gray-600">
-            Don't have an account? <a href="/register" className="text-blue-600 hover:underline">Register</a>
+            Don't have an account? <Link to="/register" className="text-blue-600 hover:underline">Register</Link>
           </p>
           <p className="mt-2 text-sm text-gray-600">
             <a href="/forget-password" className="text-blue-600 hover:underline">Forget Password</a>
