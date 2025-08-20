@@ -38,19 +38,17 @@ Check out the live version here:
    cd Ecommerce
    ```
 Install dependencies:
-
-npm install
-# or
-yarn
-
-Run the development server:
 ```
     npm run dev
     # or
     yarn dev
 ```
+Run the development server:
+
   The app will be available at:
     👉 `http://localhost:5173`
+    
+---
 
 📂 Project Structure
 ```
@@ -58,12 +56,14 @@ ShopFlow/
 ├── public/               # Static assets
 ├── src/
 │   ├── components/       # Reusable UI components
-│   ├── pages/            # Page-level components (routes)
+│   ├── pages/           # Page-level components (routes)
 │   └── index.jsx         # Entry point
 ├── tailwind.config.js    # Tailwind configuration
 ├── vite.config.js        # Vite configuration
 └── package.json          # Dependencies & scripts
 ```
+---
+
 🤝 Contributing
 
 Contributions are welcome!
@@ -80,6 +80,8 @@ git checkout -b feature/YourFeature
     git push origin feature/YourFeature
 ```
 3.Open a Pull Request 🚀
+
+---
 
 👨‍💻 Author
 
