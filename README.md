@@ -31,22 +31,20 @@ Check out the live version here:
 ---
 
 ## ⚙️ Installation
-
 1. Clone the repo:
    ```bash
    git clone https://github.com/mahmoud25osama/Ecommerce.git
    cd Ecommerce
    ```
-Install dependencies:
-```
+   2.Install dependencies:
+   ```bash
     npm run dev
     # or
     yarn dev
-```
-Run the development server:
-
-  The app will be available at:
-    👉 `http://localhost:5173`
+   ```
+   3.Run the development server:
+      The app will be available at:
+          👉 `http://localhost:5173`
     
 ---
 
