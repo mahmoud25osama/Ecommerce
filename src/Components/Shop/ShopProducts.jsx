@@ -35,7 +35,7 @@ export default function ShopProducts() {
     );
   }
 
-  function handlAddProduct(id) {
+  function handleAddProduct(id) {
     addProduct(id,
       {
         onSuccess: () => {
@@ -163,7 +163,7 @@ export default function ShopProducts() {
                     key={product._id}
                     product={product}
                     onQuickView={() => navigate(`/productDetails/${product._id}`)}
-                    onAddToCart={() => handlAddProduct(product._id)}
+                    onAddToCart={() => handleAddProduct(product._id)}
                   />
                 ))}
               </div>
