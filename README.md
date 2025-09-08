@@ -82,6 +82,7 @@ Check out the live version: **[ShopFlow.vercel.app](https://ecommerce-one-inky-6
 
 ---
 
+<<<<<<< HEAD
 ## Quick Start
 
 ### Prerequisites
@@ -91,10 +92,15 @@ Check out the live version: **[ShopFlow.vercel.app](https://ecommerce-one-inky-6
 ### Installation
 
 1. **Clone the repository**
+=======
+## ⚙️ Installation
+1. Clone the repo:
+>>>>>>> 59cefa074743439e645809eaf2d3236e36c445ac
    ```bash
    git clone https://github.com/mahmoud25osama/Ecommerce.git
    cd Ecommerce
    ```
+<<<<<<< HEAD
 
 2. **Install dependencies**
    ```bash
@@ -123,6 +129,19 @@ npm run build    # Build for production
 npm run preview  # Preview production build
 npm run lint     # Run ESLint
 ```
+=======
+   2.Install dependencies:
+   ```bash
+    npm run dev
+    # or
+    yarn dev
+   ```
+   3.Run the development server:
+      The app will be available at:
+          👉 `http://localhost:5173`
+    
+---
+>>>>>>> 59cefa074743439e645809eaf2d3236e36c445ac
 
 ---
 
@@ -132,6 +151,7 @@ npm run lint     # Run ESLint
 ShopFlow/
 ├── public/                    # Static assets & index.html
 ├── src/
+<<<<<<< HEAD
 │   ├── Components/            # Feature-based components
 │   │   ├── About/            # About page components
 │   │   ├── Brands/           # Brand listing & details
@@ -173,6 +193,18 @@ ShopFlow/
 ├── eslint.config.js           # ESLint configuration
 └── package.json               # Dependencies & scripts
 ```
+=======
+│   ├── components/       # Reusable UI components
+│   ├── pages/           # Page-level components (routes)
+│   └── index.jsx         # Entry point
+├── tailwind.config.js    # Tailwind configuration
+├── vite.config.js        # Vite configuration
+└── package.json          # Dependencies & scripts
+```
+---
+
+🤝 Contributing
+>>>>>>> 59cefa074743439e645809eaf2d3236e36c445ac
 
 ---
 
@@ -185,11 +217,17 @@ ShopFlow/
 4. Create custom hooks in `src/CustomHooks/`
 5. Test thoroughly and ensure responsive design
 
+<<<<<<< HEAD
 ### Code Quality
 - Follow ESLint rules for consistent code style
 - Use TypeScript-style JSDoc comments
 - Implement proper error handling
 - Ensure accessibility (a11y) standards
+=======
+---
+
+👨‍💻 Author
+>>>>>>> 59cefa074743439e645809eaf2d3236e36c445ac
 
 ---
 
