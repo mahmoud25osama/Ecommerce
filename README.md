@@ -4,7 +4,7 @@
 
 ## Live Demo
 
-Check out the live version: **[ShopFlow.vercel.app](https://ecommerce-one-inky-65.vercel.app/)**
+Check out the live version: **[ShopFlow.netlify.app](https://shopflow-ecommerce.netlify.app/)**
 
 ---
 
