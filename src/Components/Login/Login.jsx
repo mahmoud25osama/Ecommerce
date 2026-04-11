@@ -1,4 +1,4 @@
-import axios from 'axios';
+import apiClient from '@/lib/apiClient';
 import { useFormik } from 'formik'
 import React, { useContext, useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom';
@@ -21,7 +21,7 @@ export default function Login() {
     if (isDemo) setIsDemoClicked(true);
     else setIsClicked(true);
 
-    axios.post('https://ecommerce.routemisr.com/api/v1/auth/signin', values)
+    apiClient.post('/auth/signin', values)
       .then(function (x) {
         setToken(x.data.token);
         localStorage.setItem('tkn', x.data.token);

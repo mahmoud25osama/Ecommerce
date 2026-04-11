@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import Button from '../../ReusableComponents/Button';
 import Input from '../../ReusableComponents/Input';
 import { useFormik } from 'formik';
-import axios from 'axios';
+import apiClient from '@/lib/apiClient';
 import { CartContext } from '../../Context/CartContext/CartContext';
 
 
@@ -13,10 +13,7 @@ const CheckoutPage = () => {
         const BackRequest = {
             shippingAddress: values,
         }
-        axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}`, BackRequest, {
-            headers: {
-                token: localStorage.getItem('tkn'),
-            },
+        apiClient.post(`/orders/checkout-session/${cartId}`, BackRequest, {
             params: {
                 url: "http://localhost:8080"
             }
