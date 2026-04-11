@@ -1,12 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import ScaleLoader from '../Loader/ScaleLoader';
-import axios from 'axios';
+import apiClient from '@/lib/apiClient';
 import Error from '../Error/Error';
 import { Helmet } from 'react-helmet';
 
 export default function Brands() {
   function getBrands() {
-    return axios.get('https://ecommerce.routemisr.com/api/v1/brands');
+    return apiClient.get('/brands');
   }
 
   const { data, isLoading, isError } = useQuery({
