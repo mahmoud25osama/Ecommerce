@@ -16,7 +16,7 @@ export default function Login() {
   const [isDemoClicked, setIsDemoClicked] = useState(false); // Loading state for demo login
 
   function loginUser(values) {
-    const isDemo = values.email === 'n2o@gmail.com';
+    const isDemo = values.email === 'f@gmail.com';
     
     if (isDemo) setIsDemoClicked(true);
     else setIsClicked(true);
@@ -48,18 +48,18 @@ export default function Login() {
   function handleDemoLogin() {
   
     const demoValues = {
-      email: 'n2o@gmail.com',
+      email: 'f@gmail.com',
       password: 'asdasd'  
     };
 
    
-    registerFormik.setValues(demoValues);
+    loginFormik.setValues(demoValues);
     
     
     loginUser(demoValues);
   }
 
-  const registerFormik = useFormik({
+  const loginFormik = useFormik({
     initialValues: {
       email: '',
       password: '',
@@ -85,21 +85,21 @@ export default function Login() {
           </div> : ''}
 
           <h2 className="text-2xl font-bold mb-6 text-center">Login Now</h2>
-          <form onSubmit={registerFormik.handleSubmit} >
+          <form onSubmit={loginFormik.handleSubmit} >
 
             <div className="relative z-0 w-full mb-5 group">
-              <input value={registerFormik.values.email} onBlur={registerFormik.handleBlur} onChange={registerFormik.handleChange} type="email" name="email" id="email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+              <input value={loginFormik.values.email} onBlur={loginFormik.handleBlur} onChange={loginFormik.handleChange} type="email" name="email" id="email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
               <label htmlFor="email" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-1 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
-              {registerFormik.errors.email && registerFormik.touched.email ? <div className="p-4 mb-4 text-sm text-red-80 rounded-lg bg-red-50" role='alert'>
-                {registerFormik.errors.email}
+              {loginFormik.errors.email && loginFormik.touched.email ? <div className="p-4 mb-4 text-sm text-red-80 rounded-lg bg-red-50" role='alert'>
+                {loginFormik.errors.email}
               </div> : ''}
             </div>
 
             <div className="relative z-0 w-full mb-5 group">
-              <input value={registerFormik.values.password} onBlur={registerFormik.handleBlur} onChange={registerFormik.handleChange} type="password" name="password" id="password" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+              <input value={loginFormik.values.password} onBlur={loginFormik.handleBlur} onChange={loginFormik.handleChange} type="password" name="password" id="password" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
               <label htmlFor="password" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-1 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
-              {registerFormik.errors.password && registerFormik.touched.password ? <div className="p-4 mb-4 text-sm text-red-80 rounded-lg bg-red-50" role='alert'>
-                {registerFormik.errors.password}
+              {loginFormik.errors.password && loginFormik.touched.password ? <div className="p-4 mb-4 text-sm text-red-80 rounded-lg bg-red-50" role='alert'>
+                {loginFormik.errors.password}
               </div> : ''}
             </div>
 
